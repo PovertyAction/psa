@@ -1,0 +1,832 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Ocho preguntas para saber si los pagos por servicios ambientales (PSA) son el instrumento adecuado para su territorio. Innovations for Poverty Action.">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="¿Funciona el PSA aquí?">
+<meta property="og:description" content="Diagnóstico de ocho preguntas sobre pagos por servicios ambientales, basado en una revisión de más de 40 estudios.">
+<meta property="og:type" content="website">
+<style>
+/* the reset the Artifact runtime normally provides */
+html{color-scheme:light dark}
+body{margin:0;font:14px system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+img{max-width:100%}
+[hidden]{display:none!important}
+</style>
+<title>¿Funciona el PSA aquí?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+
+<style>
+:root{
+  --ground:#f7f9f6;
+  --surface:#ffffff;
+  --surface-2:#edf2ec;
+  --line:#d6dfd6;
+  --line-strong:#b6c4b7;
+  --ink:#1c2320;
+  --ink-2:#5c6762;
+  --ink-3:#84908a;
+  --accent:#2f8d43;
+  --accent-fill:#49ac57;
+  --accent-soft:#e4f2e6;
+  --deep:#155240;
+  --stop:#c2491a;
+  --stop-fill:#f26529;
+  --stop-soft:#fbe8de;
+  --build:#8a6410;
+  --build-fill:#f5cb57;
+  --build-soft:#fbf1d8;
+  --mech:#1c6f74;
+  --mech-fill:#84d0d4;
+  --mech-soft:#e0f2f3;
+  --shadow:0 1px 2px rgba(21,82,64,.06), 0 8px 24px -12px rgba(21,82,64,.14);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#0f1714;
+    --surface:#16211d;
+    --surface-2:#1d2b26;
+    --line:#2b3a34;
+    --line-strong:#3d5049;
+    --ink:#e7eee9;
+    --ink-2:#a3b0a9;
+    --ink-3:#7d8b84;
+    --accent:#74c785;
+    --accent-fill:#49ac57;
+    --accent-soft:#183323;
+    --deep:#84d0d4;
+    --stop:#f38b5e;
+    --stop-fill:#f26529;
+    --stop-soft:#3a1f14;
+    --build:#f0cd72;
+    --build-fill:#f5cb57;
+    --build-soft:#332a12;
+    --mech:#8fd6da;
+    --mech-fill:#84d0d4;
+    --mech-soft:#122e30;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 24px -12px rgba(0,0,0,.5);
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0f1714;
+  --surface:#16211d;
+  --surface-2:#1d2b26;
+  --line:#2b3a34;
+  --line-strong:#3d5049;
+  --ink:#e7eee9;
+  --ink-2:#a3b0a9;
+  --ink-3:#7d8b84;
+  --accent:#74c785;
+  --accent-fill:#49ac57;
+  --accent-soft:#183323;
+  --deep:#84d0d4;
+  --stop:#f38b5e;
+  --stop-fill:#f26529;
+  --stop-soft:#3a1f14;
+  --build:#f0cd72;
+  --build-fill:#f5cb57;
+  --build-soft:#332a12;
+  --mech:#8fd6da;
+  --mech-fill:#84d0d4;
+  --mech-soft:#122e30;
+  --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 24px -12px rgba(0,0,0,.5);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--ground);
+  color:var(--ink);
+  font-family:"Hanken Grotesk","Helvetica Neue",Arial,sans-serif;
+  font-size:16px;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:41rem;margin:0 auto;padding:0 1.15rem 8rem}
+
+header{padding:2.6rem 0 1.6rem}
+.eyebrow{
+  font-size:.68rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--accent);margin:0 0 1.1rem
+}
+h1{
+  font-family:"Source Serif 4",Georgia,serif;
+  font-weight:600;font-size:clamp(2rem,7vw,2.9rem);line-height:1.08;
+  letter-spacing:-.015em;margin:0 0 .7rem;text-wrap:balance;
+}
+.standfirst{font-size:1.05rem;color:var(--ink-2);margin:0 0 1.4rem;max-width:34rem}
+.provenance{
+  display:flex;flex-wrap:wrap;gap:.4rem 1.1rem;
+  font-size:.8rem;color:var(--ink-3);
+  padding-top:1.1rem;border-top:1px solid var(--line);
+}
+.provenance a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--line-strong)}
+.provenance a:hover{border-bottom-color:var(--accent)}
+
+.rail{
+  position:sticky;top:0;z-index:20;
+  background:color-mix(in srgb, var(--ground) 92%, transparent);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+  margin:0 -1.15rem;padding:.6rem 1.15rem;
+}
+.rail-inner{max-width:41rem;margin:0 auto;display:flex;align-items:center;gap:.8rem}
+.ticks{display:flex;gap:.28rem;flex:1}
+.tick{height:4px;flex:1;border-radius:2px;background:var(--line);transition:background .25s}
+.tick.done{background:var(--accent-fill)}
+.count{
+  font-size:.76rem;font-weight:600;color:var(--ink-2);
+  font-variant-numeric:tabular-nums;white-space:nowrap;
+}
+
+.block{margin-top:2.6rem}
+.block-head{display:flex;gap:.85rem;align-items:baseline;margin-bottom:.35rem}
+.block-n{
+  font-family:"Source Serif 4",Georgia,serif;font-size:.95rem;font-weight:600;
+  color:var(--ink-3);font-variant-numeric:tabular-nums;
+}
+.block-title{
+  font-family:"Source Serif 4",Georgia,serif;
+  font-size:1.4rem;font-weight:600;letter-spacing:-.01em;margin:0;
+}
+.block-lead{font-size:.9rem;color:var(--ink-2);margin:0 0 1.15rem;padding-left:2.05rem}
+.consequence{
+  display:inline-flex;align-items:center;gap:.4rem;
+  font-size:.7rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
+  padding:.24rem .6rem;border-radius:99px;margin-left:2.05rem;margin-bottom:1.1rem;
+}
+.c-gate{background:var(--stop-soft);color:var(--stop)}
+.c-build{background:var(--build-soft);color:var(--build)}
+
+.q{
+  background:var(--surface);border:1px solid var(--line);border-radius:12px;
+  padding:1.15rem 1.15rem 1rem;margin-bottom:.8rem;box-shadow:var(--shadow);
+  transition:border-color .2s;
+}
+.q[data-answered="1"]{border-color:var(--line-strong)}
+.q-num{
+  font-size:.7rem;font-weight:700;letter-spacing:.09em;color:var(--ink-3);
+  display:block;margin-bottom:.35rem;
+}
+.q-text{font-size:1rem;font-weight:600;line-height:1.4;margin:0 0 .3rem;text-wrap:pretty}
+.q-help{font-size:.83rem;color:var(--ink-2);margin:0 0 .85rem}
+.opts{display:flex;flex-direction:column;gap:.4rem}
+.opt{
+  display:flex;align-items:flex-start;gap:.65rem;
+  width:100%;text-align:left;cursor:pointer;
+  background:var(--surface-2);border:1.5px solid transparent;border-radius:9px;
+  padding:.7rem .8rem;font:inherit;font-size:.9rem;color:var(--ink);
+  transition:border-color .15s, background .15s;
+}
+.opt:hover{border-color:var(--line-strong)}
+.opt:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.dot{
+  flex:none;width:1.05rem;height:1.05rem;border-radius:99px;margin-top:.15rem;
+  border:1.5px solid var(--line-strong);background:var(--surface);
+  transition:border-color .15s, background .15s;
+}
+.opt[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent-fill)}
+.opt[aria-pressed="true"] .dot{border-color:var(--accent-fill);background:var(--accent-fill);box-shadow:inset 0 0 0 3px var(--surface)}
+.opt-unknown[aria-pressed="true"]{background:var(--surface-2);border-color:var(--line-strong)}
+.opt-unknown[aria-pressed="true"] .dot{border-color:var(--ink-3);background:var(--ink-3)}
+
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:30;
+  background:color-mix(in srgb, var(--ground) 94%, transparent);
+  backdrop-filter:blur(10px);border-top:1px solid var(--line);
+  padding:.75rem 1.15rem calc(.75rem + env(safe-area-inset-bottom));
+}
+.bar-inner{max-width:41rem;margin:0 auto;display:flex;align-items:center;gap:.9rem}
+.bar-note{font-size:.78rem;color:var(--ink-2);flex:1}
+button.go{
+  font:inherit;font-weight:700;font-size:.92rem;cursor:pointer;
+  background:var(--accent-fill);color:#fff;border:none;border-radius:9px;
+  padding:.72rem 1.3rem;white-space:nowrap;transition:opacity .2s, background .2s;
+}
+button.go:hover{background:var(--deep)}
+:root[data-theme="dark"] button.go:hover,
+:root:not([data-theme="light"]) button.go:hover{background:#3c9349}
+button.go:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+button.go[disabled]{background:var(--line-strong);color:var(--ground);cursor:not-allowed}
+
+.verdict{
+  border-radius:14px;padding:1.6rem 1.35rem;margin:2rem 0 1.5rem;
+  border:1px solid var(--line);background:var(--surface);box-shadow:var(--shadow);
+}
+.verdict-label{
+  font-size:.7rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase;
+  margin:0 0 .55rem;
+}
+.verdict h2{
+  font-family:"Source Serif 4",Georgia,serif;
+  font-size:clamp(1.55rem,5.5vw,2.05rem);font-weight:600;line-height:1.12;
+  letter-spacing:-.015em;margin:0 0 .7rem;text-wrap:balance;
+}
+.verdict p{margin:0;color:var(--ink-2);font-size:.96rem}
+.v-good{border-left:5px solid var(--accent-fill)}
+.v-good .verdict-label{color:var(--accent)}
+.v-build{border-left:5px solid var(--build-fill)}
+.v-build .verdict-label{color:var(--build)}
+.v-stop{border-left:5px solid var(--stop-fill)}
+.v-stop .verdict-label{color:var(--stop)}
+
+.scoreboard{
+  border:1px solid var(--line);border-radius:12px;overflow:hidden;
+  background:var(--surface);margin-bottom:1.6rem;
+}
+.sb-row{
+  display:flex;justify-content:space-between;align-items:center;gap:1rem;
+  padding:.8rem 1.05rem;border-bottom:1px solid var(--line);
+}
+.sb-row:last-child{border-bottom:none}
+.sb-name{font-size:.92rem;font-weight:600}
+.sb-sub{font-size:.78rem;color:var(--ink-3);font-weight:400;display:block}
+.pill{
+  flex:none;font-size:.7rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
+  padding:.28rem .62rem;border-radius:99px;white-space:nowrap;
+}
+.p-ok{background:var(--accent-soft);color:var(--accent)}
+.p-build{background:var(--build-soft);color:var(--build)}
+.p-mech{background:var(--mech-soft);color:var(--mech)}
+.p-stop{background:var(--stop-soft);color:var(--stop)}
+.p-unk{background:var(--surface-2);color:var(--ink-2)}
+
+.vchips{
+  display:flex;flex-wrap:wrap;gap:.4rem;margin:1.05rem 0 0;
+  padding-top:.9rem;border-top:1px solid var(--line);
+}
+.vchips-label{
+  flex:0 0 100%;font-size:.66rem;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--build);margin:0 0 .15rem;
+}
+.vchip{
+  font-size:.8rem;font-weight:600;padding:.26rem .62rem;border-radius:99px;
+  background:var(--build-soft);color:var(--build);
+}
+h3.sect{
+  font-family:"Source Serif 4",Georgia,serif;
+  font-size:1.3rem;font-weight:600;letter-spacing:-.01em;
+  margin:2.1rem 0 .3rem;
+}
+.sect-lead{font-size:.88rem;color:var(--ink-2);margin:0 0 1.1rem}
+.rec{
+  background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--build-fill);
+  border-radius:10px;padding:1rem 1.1rem;margin-bottom:.7rem;
+}
+.rec.mech{border-left-color:var(--mech-fill)}
+.rec.local{border-left-color:var(--stop-fill)}
+.rec-kicker{
+  font-size:.68rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--build);margin:0 0 .3rem;
+}
+.rec.mech .rec-kicker{color:var(--mech)}
+.rec.local .rec-kicker{color:var(--stop)}
+.rec-title{font-size:.97rem;font-weight:700;margin:0 0 .35rem;line-height:1.35}
+.rec-body{font-size:.88rem;color:var(--ink-2);margin:0}
+.pending{
+  background:var(--surface-2);border-radius:10px;padding:1rem 1.1rem;
+  font-size:.88rem;color:var(--ink-2);
+}
+.pending ul{margin:.5rem 0 0;padding-left:1.15rem}
+.pending li{margin-bottom:.3rem}
+
+.closing{
+  margin:2.4rem 0 0;padding:1.35rem;border-radius:12px;
+  background:var(--surface-2);font-size:.9rem;color:var(--ink-2);
+}
+.closing strong{color:var(--ink)}
+.closing a{color:var(--accent);font-weight:600;text-decoration:none;border-bottom:1px solid var(--line-strong)}
+.closing a:hover{border-bottom-color:var(--accent)}
+button.reset{
+  font:inherit;font-size:.88rem;font-weight:600;cursor:pointer;margin-top:1.6rem;
+  background:transparent;color:var(--ink-2);border:1px solid var(--line-strong);
+  border-radius:8px;padding:.6rem 1.1rem;
+}
+button.reset:hover{color:var(--ink);border-color:var(--ink-3)}
+button.reset:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+footer{
+  margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);
+  font-size:.78rem;color:var(--ink-3);
+}
+.hidden{display:none !important}
+@media (prefers-reduced-motion: reduce){*{transition:none !important;animation:none !important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <p class="eyebrow">Innovations for Poverty Action</p>
+    <h1>¿Funciona el PSA aquí?</h1>
+    <p class="standfirst">Ocho preguntas para saber si los pagos por servicios ambientales (PSA) son el instrumento adecuado para su territorio, y qué hace falta si todavía no lo son.</p>
+    <div class="provenance">
+      <span>Basado en la revisión de más de 40 estudios</span>
+      <a href="https://poverty-action.org/local-lessons-global-scale-generalizing-evidence-payments-ecosystem-services-pes" target="_blank" rel="noopener">Leer la revisión</a>
+    </div>
+  </header>
+
+  <div class="rail" id="rail">
+    <div class="rail-inner">
+      <div class="ticks" id="ticks" aria-hidden="true"></div>
+      <span class="count" id="count">0 de 8</span>
+    </div>
+  </div>
+
+  <main id="form"></main>
+
+  <div id="result" class="hidden"></div>
+
+  <footer>
+    Innovations for Poverty Action. Herramienta de diagnóstico construida sobre la revisión de evidencia
+    <em>From Local Lessons to Global Scale: Generalizing Evidence on Payments for Ecosystem Services</em>.
+    Las respuestas se procesan en este dispositivo y no se transmiten.
+  </footer>
+</div>
+
+<div class="bar" id="bar">
+  <div class="bar-inner">
+    <span class="bar-note" id="barNote">Responda todas las preguntas para ver el resultado.</span>
+    <button class="go" id="goBtn" disabled>Ver resultado</button>
+  </div>
+</div>
+
+<script>
+"use strict";
+
+/* ------------------------------------------------------------------
+   Answer codes
+     ok         the condition holds
+     fail       local condition absent and not buildable -> PSA is not the instrument
+     localbuild local condition absent, resolvable through another public policy
+     stop       the payment does not reach whoever decides -> hard stop
+     mechweak   the mechanism needs strengthening before PSA can work
+     build      implementation or financing condition the implementer can put in place
+     unknown    no information
+-------------------------------------------------------------------*/
+
+const BLOCKS = [
+  {
+    id: "local",
+    n: "01",
+    title: "Condiciones locales",
+    lead: "Rasgos del territorio que ya son ciertos y que el programa de PSA no puede fabricar por sí mismo.",
+    consequence: { cls: "c-gate", text: "Si faltan, el PSA no es el instrumento" },
+    qs: [
+      {
+        id: "q1",
+        chip: "costo de oportunidad",
+        text: "¿Cuánto ingreso deja de percibir quien conserva?",
+        help: "El PSA rinde en el punto medio: ni tierra sin riesgo de conversión, ni usos tan rentables que compensarlos resulte impagable.",
+        shortName: "el costo de oportunidad de conservar",
+        opts: [
+          { t: "Poco o nada; la tierra casi no rinde y la conversión es improbable", v: "fail", why: "bajo" },
+          { t: "Moderado: compite con agricultura de pequeña escala o ganadería extensiva", v: "ok" },
+          { t: "Muy alto: compite con usos muy rentables", v: "fail", why: "alto" },
+          { t: "No lo sé", v: "unknown" }
+        ],
+        failWhyMap: {
+          bajo: "Con costos de oportunidad muy bajos el pago no cambia ninguna decisión, y la conservación se habría dado sin el programa.",
+          alto: "Compensar usos muy rentables es fiscalmente costoso y difícil de fiscalizar."
+        },
+        failAltMap: {
+          bajo: "Conviene reorientar el presupuesto hacia predios bajo presión real.",
+          alto: "En ecosistemas de valor excepcional el PSA puede seguir siendo apropiado, porque el retorno social también es alto, pero conviene evaluarlo junto con áreas protegidas, regulación del uso del suelo o diversificación de medios de vida."
+        }
+      },
+      {
+        id: "q2",
+        chip: "claridad de derechos",
+        text: "¿Hay claridad local sobre quién controla cada predio, aunque no exista título formal?",
+        help: "El PSA no exige catastro completo. Basta con derechos reconocidos localmente y sin disputa.",
+        shortName: "la claridad sobre quién controla cada predio",
+        opts: [
+          { t: "Sí, los derechos son reconocidos localmente y no están en disputa", v: "ok" },
+          { t: "No, hay reclamos superpuestos o derechos en disputa", v: "localbuild" },
+          { t: "No lo sé", v: "unknown" }
+        ],
+        rec: {
+          kind: "local",
+          kicker: "Condición local por resolver",
+          title: "Resolver los derechos por otra vía antes del PSA",
+          body: "La claridad de derechos es un rasgo del territorio, no algo que el programa de PSA pueda construir por sí mismo. Se resuelve a través de otra política pública: titulación, reconocimiento de derechos de uso, o la definición de una unidad de contratación distinta, por ejemplo firmando con la comunidad en lugar del hogar."
+        }
+      }
+    ]
+  },
+  {
+    id: "mech",
+    n: "02",
+    title: "Mecanismo",
+    lead: "El PSA funciona porque el pago compite contra el ingreso que se deja de percibir, y porque es creíble que ese ingreso se dejará de percibir en caso de incumplimiento.",
+    consequence: { cls: "c-gate", text: "Si el mecanismo no funciona, el PSA no es la herramienta correcta" },
+    qs: [
+      {
+        id: "q3",
+        chip: "quién decide la tala",
+        text: "¿Quién decide la tala en su territorio?",
+        help: "Esta es la pregunta que más veces decide el resultado.",
+        shortName: "quién decide la tala",
+        opts: [
+          { t: "Los hogares, las comunidades o sus estructuras de gobierno colectivo (asamblea comunal, cabildo indígena, cooperativa), sobre su propia tierra", v: "ok" },
+          { t: "Actores distintos de quienes recibirían el pago", v: "stop" },
+          { t: "No lo sé", v: "unknown" }
+        ],
+        stopWhy: "El pago no compite contra lo que impulsa la deforestación. El pago se le ofrece a quien no está tomando la decisión de talar."
+      },
+      {
+        id: "q4",
+        chip: "credibilidad de la detección",
+        text: "¿Creerán los participantes que el incumplimiento sería detectado?",
+        help: "Lo que sostiene el cumplimiento es la percepción de que hay vigilancia, no el volumen de sanciones que se aplican.",
+        shortName: "la credibilidad de la detección",
+        opts: [
+          { t: "Sí, o puede volverse creíble", v: "ok" },
+          { t: "No, y hoy no hay cómo hacerlo creíble", v: "mechweak" },
+          { t: "No lo sé", v: "unknown" }
+        ],
+        rec: {
+          kind: "mech",
+          kicker: "Mecanismo por fortalecer",
+          title: "Hacer visible el monitoreo, no solo ejecutarlo",
+          body: "Sin la creencia de que el incumplimiento se detecta, el pago deja de competir contra el ingreso que se deja de percibir. Algunas formas de fortalecerlo: publicar el protocolo de verificación; avisar a cada participante cuando una alerta satelital marque su predio y abrir una ventana para responder; definir una escala de sanciones que se use de verdad, por ejemplo aviso, retención parcial y terminación. Conviene tener presente que la debilidad de las sanciones suele responder a razones políticas antes que técnicas, y reconocerlo temprano evita diseñar un esquema que no se puede aplicar. Innovations for Poverty Action puede acompañar en construir la capacidad de monitoreo: escriba a policy@poverty-action.org."
+        }
+      }
+    ]
+  },
+  {
+    id: "impl",
+    n: "03",
+    title: "Condiciones de implementación",
+    lead: "La plomería del programa: quién firma, qué se monitorea, cómo y cuándo fluye el pago.",
+    consequence: { cls: "c-build", text: "Si faltan, se construyen" },
+    qs: [
+      {
+        id: "q5",
+        chip: "polígono y titular",
+        text: "¿Se puede delimitar un polígono georreferenciado y vincularlo a un titular reconocido?",
+        help: "No hace falta catastro nacional. Hace falta tener el polígono georreferenciado y vinculado al titular al que se va a hacer el pago, para que la verificación funcione.",
+        shortName: "el polígono georreferenciado ligado a un titular",
+        opts: [
+          { t: "Sí, hoy es posible", v: "ok" },
+          { t: "No, falta capacidad o información", v: "build" },
+          { t: "No lo sé", v: "unknown" }
+        ],
+        rec: {
+          kicker: "Condición por construir",
+          title: "Capturar polígonos a bajo costo con intermediarios",
+          body: "Una posible solución: separar la capa de derechos de la capa operativa, que dice qué área se paga y a quién. La captura de polígonos puede delegarse a organizaciones ya presentes en el territorio, con GPS y herramientas abiertas, en lugar de esperar el catastro."
+        }
+      },
+      {
+        id: "q6",
+        chip: "monitoreo satelital",
+        text: "¿Existe o puede construirse monitoreo satelital con verificación de campo focalizada?",
+        help: "La práctica estándar es detección satelital primero y visitas de campo dirigidas a los predios marcados.",
+        shortName: "el monitoreo satelital con verificación de campo",
+        opts: [
+          { t: "Sí, existe o hay ruta clara para construirlo", v: "ok" },
+          { t: "No, hoy no existe esa capacidad", v: "build" },
+          { t: "No lo sé", v: "unknown" }
+        ],
+        rec: {
+          kicker: "Condición por construir",
+          title: "Montar el monitoreo con formación e imágenes gratuitas",
+          body: "Se puede construir capacidad propia con formación gratuita y herramientas abiertas, o usar plataformas que ya integran imágenes y alertas. Conviene verificar primero la cobertura y la precisión de esas plataformas en su territorio, porque rinden mejor en países densamente boscosos. La verificación de campo sigue siendo necesaria para calibrar la detección. Innovations for Poverty Action puede acompañar en construir la capacidad de monitoreo: escriba a policy@poverty-action.org."
+        }
+      },
+      {
+        id: "q7",
+        chip: "pagos puntuales",
+        text: "¿Se puede pagar de forma puntual, predecible y trazable?",
+        help: "Cuando los pagos se atrasan, la participación y el esfuerzo caen.",
+        shortName: "el pago puntual, predecible y trazable",
+        opts: [
+          { t: "Sí, hay un canal confiable", v: "ok" },
+          { t: "No, los pagos serían irregulares o en efectivo", v: "build" },
+          { t: "No lo sé", v: "unknown" }
+        ],
+        rec: {
+          kicker: "Condición por construir",
+          title: "Pagar a cuenta o monedero móvil, con calendario público",
+          body: "Publicar cuándo cierra la verificación y cuándo llega el dinero, y tratar la puntualidad como indicador de desempeño del programa. Donde la bancarización es baja, una opción es montarse sobre los rieles de pago que ya existen. En tenencia colectiva el pago suele llegar a la organización, lo que exige transparencia en el reparto interno."
+        }
+      }
+    ]
+  },
+  {
+    id: "fin",
+    n: "04",
+    title: "Sostenibilidad",
+    lead: "Un PSA que se interrumpe pierde la confianza que tardó años en construir.",
+    consequence: { cls: "c-build", text: "Si falta, se construye" },
+    qs: [
+      {
+        id: "q8",
+        chip: "financiamiento durable",
+        text: "¿Existe una fuente de financiamiento con vocación de permanencia?",
+        help: "La durabilidad del programa depende de la estabilidad de la fuente y de su tamaño.",
+        shortName: "una fuente de financiamiento con vocación de permanencia",
+        opts: [
+          { t: "Sí: un impuesto o tasa con destinación específica", v: "ok", durable: true },
+          { t: "Sí: recursos públicos, de cooperación, compradores privados y usuarios del servicio, o un fondo mixto", v: "ok", durable: false },
+          { t: "No hay fuente identificada", v: "build" },
+          { t: "No lo sé", v: "unknown" }
+        ],
+        rec: {
+          kicker: "Financiamiento por construir",
+          title: "Resolver el financiamiento antes de diseñar el programa",
+          body: "Sin una fuente identificada, el programa arranca con una fecha de vencimiento implícita. Los impuestos o tasas con destinación específica han sido la base más predecible. Los modelos financiados por compradores privados o por usuarios del servicio funcionan, pero se suelen mantener locales. Los fondos mixtos permiten diversificar la fuente y reducir el riesgo de depender de una sola."
+        }
+      }
+    ]
+  }
+];
+
+const QS = BLOCKS.flatMap(b => b.qs.map(q => ({ ...q, blockId: b.id })));
+const TOTAL = QS.length;
+const GATES = ["q1", "q3"];          // the two answers that can rule PSA out outright
+const answers = {};
+
+/* ---------------- render form ---------------- */
+const formEl = document.getElementById("form");
+let qIndex = 0;
+
+BLOCKS.forEach(b => {
+  const sec = document.createElement("section");
+  sec.className = "block";
+  sec.innerHTML =
+    '<div class="block-head"><span class="block-n">' + b.n + '</span>' +
+    '<h2 class="block-title">' + b.title + '</h2></div>' +
+    '<p class="block-lead">' + b.lead + '</p>' +
+    '<span class="consequence ' + b.consequence.cls + '">' + b.consequence.text + '</span>';
+
+  b.qs.forEach(q => {
+    qIndex++;
+    const card = document.createElement("div");
+    card.className = "q";
+    card.id = "card-" + q.id;
+    let html =
+      '<span class="q-num">PREGUNTA ' + String(qIndex).padStart(2, "0") + '</span>' +
+      '<p class="q-text">' + q.text + '</p>' +
+      (q.help ? '<p class="q-help">' + q.help + '</p>' : "") +
+      '<div class="opts" role="group" aria-label="' + q.text.replace(/"/g, "&quot;") + '">';
+    q.opts.forEach((o, i) => {
+      const unk = o.v === "unknown" ? " opt-unknown" : "";
+      html += '<button type="button" class="opt' + unk + '" aria-pressed="false" ' +
+        'data-q="' + q.id + '" data-i="' + i + '">' +
+        '<span class="dot" aria-hidden="true"></span><span>' + o.t + '</span></button>';
+    });
+    html += "</div>";
+    card.innerHTML = html;
+    sec.appendChild(card);
+  });
+
+  formEl.appendChild(sec);
+});
+
+const ticksEl = document.getElementById("ticks");
+for (let i = 0; i < TOTAL; i++) {
+  const t = document.createElement("span");
+  t.className = "tick";
+  ticksEl.appendChild(t);
+}
+
+/* ---------------- interaction ---------------- */
+formEl.addEventListener("click", e => {
+  const btn = e.target.closest(".opt");
+  if (!btn) return;
+  const qid = btn.dataset.q;
+  answers[qid] = Number(btn.dataset.i);
+
+  btn.parentElement.querySelectorAll(".opt").forEach(b => b.setAttribute("aria-pressed", "false"));
+  btn.setAttribute("aria-pressed", "true");
+  document.getElementById("card-" + qid).dataset.answered = "1";
+  syncProgress();
+});
+
+function syncProgress() {
+  const n = Object.keys(answers).length;
+  document.getElementById("count").textContent = n + " de " + TOTAL;
+  const ticks = ticksEl.children;
+  QS.forEach((q, i) => ticks[i].classList.toggle("done", answers[q.id] !== undefined));
+  const left = TOTAL - n;
+  document.getElementById("goBtn").disabled = left > 0;
+  document.getElementById("barNote").textContent = left === 0
+    ? "Listo. Puede ver el resultado."
+    : "Falta " + (left === 1 ? "1 pregunta." : left + " preguntas.");
+}
+
+/* ---------------- helpers ---------------- */
+function answerOf(qid) {
+  const q = QS.find(x => x.id === qid);
+  return q.opts[answers[qid]];
+}
+
+function list(names) {
+  if (names.length === 1) return names[0];
+  return names.slice(0, -1).join(", ") + " y " + names[names.length - 1];
+}
+
+/* ---------------- evaluate ---------------- */
+function evaluate() {
+  const localFails = [], localBuilds = [], builds = [], unknowns = [];
+  let hardStop = null, mechWeak = null;
+
+  QS.forEach(q => {
+    const a = answerOf(q.id);
+    if (a.v === "unknown") unknowns.push(q);
+    else if (a.v === "stop") hardStop = q;
+    else if (a.v === "mechweak") mechWeak = q;
+    else if (a.v === "fail") localFails.push({ q, why: a.why });
+    else if (a.v === "localbuild") localBuilds.push({ q, rec: q.rec });
+    else if (a.v === "build") builds.push({ q, rec: q.rec });
+  });
+
+  const openGates = unknowns.filter(q => GATES.includes(q.id));
+
+  /* Q8 keeps a single pass/fail gate, but we still track which kind of source
+     was picked so a passing-but-less-durable answer can carry a caveat into
+     the final verdict instead of being treated identically to an earmarked tax. */
+  const q8Answer = answerOf("q8");
+  const fundingLessDurable = q8Answer.v === "ok" && q8Answer.durable === false;
+  const fundingNote = "La fuente de financiamiento identificada es viable, pero puede ser menos estable en el "
+    + "tiempo que un impuesto o tasa destinada, especialmente los presupuestos públicos, sujetos a ciclos "
+    + "políticos. Conviene monitorear su continuidad.";
+
+  /* per-block status */
+  const status = {};
+  BLOCKS.forEach(b => {
+    const codes = b.qs.map(q => answerOf(q.id).v);
+    if (codes.includes("stop") || codes.includes("fail")) status[b.id] = ["p-stop", "No se cumple"];
+    else if (codes.includes("localbuild")) status[b.id] = ["p-stop", "Por resolver"];
+    else if (codes.includes("mechweak")) status[b.id] = ["p-mech", "Por fortalecer"];
+    else if (codes.includes("build")) status[b.id] = ["p-build", "Por construir"];
+    else if (codes.every(c => c === "unknown")) status[b.id] = ["p-unk", "Sin información"];
+    else if (codes.includes("unknown")) status[b.id] = ["p-unk", "Parcial"];
+    else status[b.id] = ["p-ok", "Se cumple"];
+  });
+
+  /* build the ordered list of things that need doing */
+  const todo = [...localBuilds, ...(mechWeak ? [{ q: mechWeak, rec: mechWeak.rec }] : []), ...builds];
+
+  let tier, label, head, lead;
+  let chips = [];
+
+  if (hardStop) {
+    tier = "v-stop"; label = "El PSA no es el instrumento";
+    head = "El pago no compite contra lo que impulsa la deforestación.";
+    lead = "El pago se le ofrece a quien no está tomando la decisión de talar.";
+  } else if (localFails.length) {
+    tier = "v-stop"; label = "El PSA no es el instrumento";
+    const names = localFails.map(f => f.q.shortName);
+    head = localFails.length === 1
+      ? "No se cumple una condición local clave: " + names[0] + "."
+      : "No se cumplen las siguientes condiciones locales: " + list(names) + ".";
+    lead = localFails.map(f => f.q.failWhyMap[f.why] + " " + f.q.failAltMap[f.why]).join(" ")
+         + (builds.length
+            ? " Aunque se construyeran las condiciones de implementación que faltan, esta condición seguiría sin cumplirse."
+            : "");
+  } else if (openGates.length) {
+    tier = "v-build"; label = "Diagnóstico incompleto";
+    head = openGates.length === 1
+      ? "Falta la respuesta que decide el resultado: " + openGates[0].shortName + "."
+      : "Faltan " + openGates.length + " respuestas que deciden el resultado.";
+    lead = "Las condiciones locales y el mecanismo son lo único que no se puede construir, así que definen "
+         + "si el PSA aplica.";
+  } else if (localBuilds.length) {
+    tier = "v-build"; label = "El PSA no es el instrumento todavía";
+    head = "Falta una condición local, y se resuelve por otra vía antes del PSA.";
+    lead = "No se cumple " + list(localBuilds.map(b => b.q.shortName)) + ". Es un rasgo del territorio, "
+         + "no algo que el programa de PSA pueda construir, pero sí algo que otra política pública puede resolver."
+         + (builds.length ? " También hay " + (builds.length === 1 ? "1 condición" : builds.length + " condiciones") + " de implementación por construir." : "");
+  } else if (mechWeak) {
+    tier = "v-build"; label = "El PSA podría ser un buen instrumento";
+    head = "Si el monitoreo es más saliente, el PSA podría funcionar en su contexto.";
+    lead = "Las condiciones locales se cumplen y el pago compite contra un ingreso real. Lo que falta es que "
+         + "el incumplimiento resulte creíblemente detectable, porque de eso depende que el pago siga compitiendo."
+         + (builds.length ? " Además hay " + (builds.length === 1 ? "1 condición" : builds.length + " condiciones") + " de implementación por construir." : "");
+  } else if (builds.length) {
+    /* The headline stays a fixed length whatever the number of gaps: the names go
+       into the chip row below, so the verdict card cannot turn into a wall. */
+    tier = "v-build"; label = "Es necesario construir capacidad";
+    head = "El PSA puede ser el instrumento. "
+         + (builds.length === 1
+              ? "Queda una pieza por construir."
+              : "Quedan " + builds.length + " piezas por construir.");
+    lead = "Las condiciones locales se cumplen y el mecanismo aplica, la pregunta que sigue es si se puede "
+         + "construir lo que falta."
+         + (fundingLessDurable ? " " + fundingNote : "");
+    chips = builds.map(b => b.q.chip);
+  } else {
+    tier = "v-good"; label = "Buen candidato";
+    head = "Las condiciones están. El siguiente paso es diseñar.";
+    lead = "El territorio cumple las condiciones locales, el pago compite contra una decisión económica real "
+         + "y la plomería del programa está disponible. Las decisiones que siguen son de diseño: nivel y "
+         + "escalonamiento del pago, unidad de contratación y reglas de inscripción."
+         + (fundingLessDurable ? " " + fundingNote : "");
+  }
+
+  if (unknowns.length >= 3 && tier === "v-good") {
+    tier = "v-build"; label = "Buen candidato, con información pendiente";
+    head = "Nada descarta al PSA, pero " + unknowns.length + " respuestas quedaron abiertas.";
+    lead = "Las condiciones que sí se verificaron respaldan un PSA. Con esta cantidad de información "
+         + "pendiente conviene tratar el resultado como preliminar."
+         + (fundingLessDurable ? " " + fundingNote : "");
+  }
+
+  return { tier, label, head, lead, todo, unknowns, status, chips };
+}
+
+/* ---------------- render result ---------------- */
+function showResult() {
+  const r = evaluate();
+  const res = document.getElementById("result");
+
+  let html =
+    '<div class="verdict ' + r.tier + '">' +
+      '<p class="verdict-label">' + r.label + '</p>' +
+      '<h2>' + r.head + '</h2>' +
+      '<p>' + r.lead + '</p>' +
+      (r.chips.length
+        ? '<div class="vchips"><span class="vchips-label">Por construir</span>' +
+          r.chips.map(c => '<span class="vchip">' + c + '</span>').join("") + '</div>'
+        : "") +
+    '</div><div class="scoreboard">';
+
+  BLOCKS.forEach(b => {
+    const s = r.status[b.id];
+    html +=
+      '<div class="sb-row"><span class="sb-name">' + b.title +
+      '<span class="sb-sub">' + b.qs.length + (b.qs.length === 1 ? " pregunta" : " preguntas") + '</span></span>' +
+      '<span class="pill ' + s[0] + '">' + s[1] + '</span></div>';
+  });
+  html += "</div>";
+
+  /* When a local condition or the mechanism rules PSA out, a "what to build" list
+     would contradict the verdict: the gap is named in the lead instead. */
+  if (r.todo.length && r.tier !== "v-stop") {
+    html += '<h3 class="sect">Qué hace falta para que el PSA funcione</h3>' +
+      '<p class="sect-lead">Lo que es necesario construir o poner en su lugar.</p>';
+    r.todo.forEach(t => {
+      const kind = t.rec.kind ? " " + t.rec.kind : "";
+      html += '<div class="rec' + kind + '">' +
+        '<p class="rec-kicker">' + (t.rec.kicker || "Condición por construir") + '</p>' +
+        '<p class="rec-title">' + t.rec.title + '</p>' +
+        '<p class="rec-body">' + t.rec.body + "</p></div>";
+    });
+  }
+
+  if (r.unknowns.length) {
+    html += '<h3 class="sect">Información por levantar</h3>' +
+      '<p class="sect-lead">' +
+      (r.unknowns.length === 1
+        ? "Es necesario averiguar esta respuesta para completar la evaluación."
+        : "Es necesario averiguar estas respuestas para completar la evaluación.") +
+      (r.unknowns.length >= 3
+        ? " Con " + r.unknowns.length + " sin información, el resultado es preliminar."
+        : "") +
+      '</p><div class="pending">Queda por averiguar:<ul>';
+    r.unknowns.forEach(q => { html += "<li>" + q.text + "</li>"; });
+    html += "</ul></div>";
+  }
+
+  html +=
+    '<div class="closing"><strong>Con ocho preguntas ya sabe si el PSA puede ser el instrumento para su ' +
+    'contexto, y qué haría falta si todavía no lo es.</strong> Para profundizar, Innovations for Poverty ' +
+    'Action puede acompañar el diseño del programa y la construcción de las piezas que faltan: escriba a ' +
+    '<a href="mailto:policy@poverty-action.org">policy@poverty-action.org</a>. ' +
+    'También puede <a href="https://poverty-action.org/local-lessons-global-scale-generalizing-evidence-payments-ecosystem-services-pes" target="_blank" rel="noopener">leer la revisión completa</a>.</div>' +
+    '<button class="reset" id="resetBtn">Volver a empezar</button>';
+
+  res.innerHTML = html;
+  res.classList.remove("hidden");
+  formEl.classList.add("hidden");
+  document.getElementById("rail").classList.add("hidden");
+  document.getElementById("bar").classList.add("hidden");
+  window.scrollTo({ top: 0, behavior: "smooth" });
+
+  document.getElementById("resetBtn").addEventListener("click", () => {
+    Object.keys(answers).forEach(k => delete answers[k]);
+    formEl.querySelectorAll(".opt").forEach(b => b.setAttribute("aria-pressed", "false"));
+    formEl.querySelectorAll(".q").forEach(c => delete c.dataset.answered);
+    res.classList.add("hidden");
+    res.innerHTML = "";
+    formEl.classList.remove("hidden");
+    document.getElementById("rail").classList.remove("hidden");
+    document.getElementById("bar").classList.remove("hidden");
+    syncProgress();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
+
+document.getElementById("goBtn").addEventListener("click", showResult);
+syncProgress();
+</script>
+
+</body>
+</html>
